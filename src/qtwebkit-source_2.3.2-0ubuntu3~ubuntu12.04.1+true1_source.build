@@ -1,0 +1,18 @@
+ dpkg-buildpackage -rfakeroot -d -us -uc -S -nc -sa -v2.2.1-1ubuntu4
+dpkg-buildpackage: source package qtwebkit-source
+dpkg-buildpackage: source version 2.3.2-0ubuntu3~ubuntu12.04.1+true1
+dpkg-buildpackage: source changed by Michael Nolan <mpnolan@truefitness.com>
+ dpkg-source --before-build qtwebkit-source-precise
+dpkg-buildpackage: warning: it is a bad idea to generate a source package without cleaning up first, it might contain undesired files.
+ dpkg-source -b qtwebkit-source-precise
+dpkg-source: info: using source format `3.0 (quilt)'
+dpkg-source: info: building qtwebkit-source using existing ./qtwebkit-source_2.3.2.orig.tar.gz
+dpkg-source: info: building qtwebkit-source in qtwebkit-source_2.3.2-0ubuntu3~ubuntu12.04.1+true1.debian.tar.gz
+dpkg-source: info: building qtwebkit-source in qtwebkit-source_2.3.2-0ubuntu3~ubuntu12.04.1+true1.dsc
+ dpkg-genchanges -S -sa -v2.2.1-1ubuntu4 >../qtwebkit-source_2.3.2-0ubuntu3~ubuntu12.04.1+true1_source.changes
+parsechangelog/debian: warning: 'since' option specifies non-existing version
+parsechangelog/debian: warning: use newest entry that is earlier than the one specified
+dpkg-genchanges: warning: the current version (2.3.2-0ubuntu3~ubuntu12.04.1+true1) is earlier than the previous one (2.3.2-0ubuntu3)
+dpkg-genchanges: including full source code in upload
+ dpkg-source --after-build qtwebkit-source-precise
+dpkg-buildpackage: full upload (original source is included)

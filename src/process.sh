@@ -6,15 +6,10 @@ backportpackage -s saucy -w . -S "+true1" qtwebkit-source
 
 #sudo apt-get build-dep qt4-x11
 
-cd qt4-x11-precise
-quilt new true-gc-black-screenfix.patch
-quilt add src/declarative/qml/qdeclarative{component,objectscriptclass,vme}.cpp
+cd qtwebkit-source-precise
+quilt new true-flash-wmode.patch
 quilt add src/declarative/qml/qdeclarativedata_p.h 
-patch -p6 < ../../true_patches/rootObjectCreation.patch
-quilt refresh
-quilt new true-qtbug-21337.patch
-quilt add src/declarative/graphicsitems/qdeclarativepathview.cpp
-patch -p0 < ../../true_patches/qtbug-21337.patch
+patch -p6 < ../../true_patches/flash_wmode.patch
 quilt refresh
 #quilt header -e "message"
 

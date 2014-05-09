@@ -1,29 +1,23 @@
 #!/usr/bin/make
 
-DEBVERSION := 4.8.4+dfsg
-UBVERSION := 0ubuntu18.3~ubuntu12.04.1
+DEBVERSION := 2.3.2
+UBVERSION := 0ubuntu3~ubuntu12.04.1
 TRVERSION := +true1
 VERSION := ${DEBVERSION}-${UBVERSION}${TRVERSION}
-APPNAME=qt4-x11
+APPNAME=qtwebkit-source
 SRCDIR=./src
 DEBDIR=./debs
-APPDIR=${SRCDIR}/${APPNAME}-${VERSION}
-TARNAME=${APPDIR}.tar.gz
 DSCNAME=${APPNAME}_${VERSION}.dsc
 MAINTAINER=mpnolan@truefitness.com
-BUILDDIR=${SRCDIR}/${APPNAME}-${DEBVERSION}
-#DEBDIR := ${APPDIR}/debian
-DEBIAN_TGZ := http://software.truefitness.com/true-qt-webkit/qt4-x11_4.8.4+dfsg-0ubuntu18.3~ubuntu12.04.1${TRVERSION}.debian.tar.gz
-
+BUILDDIR=${SRCDIR}/${APPNAME}-precise
+DEBIAN_TGZ := http://software.truefitness.com/true-qt-webkit/qtwebkit-source_2.3.2-0ubuntu3~ubuntu12.04.1${TRVERSION}.debian.tar.gz
 
 getsources: get_debian_tgz get_source_package
 all: shownames getsources unpack build repo
 
 shownames:
-	@echo packaging ${APPDIR}
 	@echo packagename=${APPNAME}
 	@echo version=${VERSION}
-	@echo dirname=${APPDIR}
 	@echo debdir=${DEBDIR}
 	@echo srcdir=${SRCDIR}
 	@echo dscname=${DSCNAME}
@@ -40,7 +34,7 @@ get_debian_tgz:
 
 get_source_package:
 	@echo "downloading orig.tar.gz from server..."
-	(cd ${SRCDIR}; wget http://software.truefitness.com/true-qt-webkit/qt4-x11_4.8.4+dfsg.orig.tar.xz)
+	(cd ${SRCDIR}; wget http://software.truefitness.com/true-qt-webkit/qtwebkit-source_2.3.2.orig.tar.gz)
 
 source:
 	@echo "creating source package..."

@@ -1,0 +1,201 @@
+Format: 1.8
+Date: Fri, 09 May 2014 13:57:53 -0500
+Source: qtwebkit-source
+Binary: libqtwebkit-dev libqtwebkit4 libqtwebkit-qmlwebkitplugin libqtwebkit4-dbg
+Architecture: source
+Version: 2.3.2-0ubuntu3~ubuntu12.04.1+true1
+Distribution: precise-backports
+Urgency: high
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Changed-By: Michael Nolan <mpnolan@truefitness.com>
+Description: 
+ libqtwebkit-dev - Web content engine library for Qt - development files
+ libqtwebkit-qmlwebkitplugin - Qt WebKit QML plugin
+ libqtwebkit4 - Web content engine library for Qt
+ libqtwebkit4-dbg - Web content engine library for Qt - debugging symbols
+Closes: 673268 676162 687036
+Launchpad-Bugs-Fixed: 1180731 1191286 1202425
+Changes: 
+ qtwebkit-source (2.3.2-0ubuntu3~ubuntu12.04.1+true1) precise-backports; urgency=low
+ .
+   * No-change backport to precise
+ .
+ qtwebkit-source (2.3.2-0ubuntu3) saucy; urgency=low
+ .
+   * Add basic AArch64 support, based on
+     https://bugs.webkit.org/show_bug.cgi?id=116030 by Andreas Schwab.
+ .
+ qtwebkit-source (2.3.2-0ubuntu2) saucy; urgency=low
+ .
+   * Set WTF_USE_3D_GRAPHICS=0 on ARM, fix compile
+ .
+ qtwebkit-source (2.3.2-0ubuntu1) saucy; urgency=low
+ .
+   * New upstream release LP: #1202425
+ .
+ qtwebkit-source (2.3.1-0ubuntu4) saucy; urgency=low
+ .
+   * Use g++ 4.7 on ARM
+ .
+ qtwebkit-source (2.3.1-0ubuntu3) saucy; urgency=low
+ .
+   * Do not hardcode wrong .so version name when creating a symlink,
+     instead use a symlink provided by upstream build (LP: #1191286).
+ .
+ qtwebkit-source (2.3.1-0ubuntu2) saucy; urgency=low
+ .
+   * Fix libQtWebkit.so symlink to point to the correct lib version
+ .
+ qtwebkit-source (2.3.1-0ubuntu1) saucy; urgency=low
+ .
+   * New upstream release.
+   * Use --no-force-sse2 for now.
+   * debian/patches/kubuntu_fix_for_powerpc.diff:
+     - Drop, merged upstream
+   * debian/patches/108991-jsval-32bit-fix.patch:
+     - Drop, merged upstream
+ .
+ qtwebkit-source (2.3.0-0ubuntu3) saucy; urgency=low
+ .
+   * Add patch 108991-jsval-32bit-fix.patch fixes
+     QtWebKit JS crash on 32-bit systems LP: #1180731
+ .
+ qtwebkit-source (2.3.0-0ubuntu2) raring; urgency=low
+ .
+   * Add kubuntu_fix_for_powerpc.diff from upstream to fix compile on powerpc
+     https://bugs.webkit.org/show_bug.cgi?id=112141
+ .
+ qtwebkit-source (2.3.0-0ubuntu1) raring; urgency=low
+ .
+   * New upstream release
+ .
+ qtwebkit-source (2.3-0ubuntu8) raring; urgency=low
+ .
+   * Disable the assembler and JIT on powerpc with more gusto.
+ .
+ qtwebkit-source (2.3-0ubuntu7) raring; urgency=low
+ .
+   * Add ENABLE_ASSEMBLER=0 to powerpc in hope it'll work
+ .
+ qtwebkit-source (2.3-0ubuntu6) raring; urgency=low
+ .
+   * Fix conditional semantics
+ .
+ qtwebkit-source (2.3-0ubuntu5) raring; urgency=low
+ .
+   * Disable JIT assember on powerpc
+ .
+ qtwebkit-source (2.3-0ubuntu4) raring; urgency=low
+ .
+   * Use $(DEB_HOST_MULTIARCH) for install location for .so link
+ .
+ qtwebkit-source (2.3-0ubuntu3) raring; urgency=low
+ .
+   * Install upper case headers
+   * Install .so link
+ .
+ qtwebkit-source (2.3-0ubuntu2) raring; urgency=low
+ .
+   * Install full headers
+ .
+ qtwebkit-source (2.3-0ubuntu1) raring; urgency=low
+ .
+   * New upstream release, QtWebKit 2.3 is a backport of QtWebkit for
+     Qt 5 to Qt 4, backport packaging from Qt 5
+   * Switch to building with ./Tools/Scripts/build-webkit as recommended
+     by upstream
+ .
+ qtwebkit-opensource-src (5.0.1-0ubuntu1) raring; urgency=low
+ .
+   * New upstream release.
+   * debian/control:
+     - Add missing Pre-Depends for xz compression
+     - Rename packages by appending the major version
+     - Depend on system png/jpeg libraries
+     - Depend on qtsensors5-dev and qtlocation5-dev
+   * debian/*.install:
+     - Adjust to the new version and library renames
+   * debian/rules:
+     - Remove .la files
+     - Remove rpath from QtWebProcess/QtWebPluginProcess
+   * debian/copyright:
+     - Fix invalid UTF-8
+   * Drop patches:
+     - 01_lflags_as-needed.diff
+     - 02_add_nostrip_for_debug_packages.diff
+     - 03_hide_std_symbols.diff
+     - 04_enable_debug_information.diff
+     - Fix_build_with_GLib_2.31_changeset_r97269.patch
+     - defines_qt_webkit.diff
+     - glibc_hurd_mkspecs.diff
+     - linux_amd64_no_overcommit.diff
+     - upstream_changeset_r113848.diff
+     - upstream_changeset_r93631.diff
+   * Update patches:
+     - 05_sparc_unaligned_access.diff
+     - hurd.diff
+     - no_gc_sections.diff (add i386/i686)
+     - stabs_format_debug_info.diff (add i386/i686)
+     - webkit_qt_hide_symbols.diff
+   * Add patch:
+     - disable_geolocation_501.diff (build failure)
+     - save_memory.diff (try to conserve even more memory on arm)
+   * Add Ubuntu specific patch:
+     - devicePixelResolution.patch
+ .
+ qtwebkit (2.2.1-5) unstable; urgency=low
+ .
+   * Team upload.
+   * Re upload the package to fix the M-A uninstallability due to a binNMU
+     (Closes: #676162).
+   * This upload will get rebuilt with xz compression (Closes: #687036).
+     Thanks Ansgar Burchardt for the patch.
+   * Rewrite debian/copyright to DEP-5 (Closes: #673268).
+     Thanks Elena ``of Valhalla'' Grandi and Tobias Bengfort.
+     The current copyright is *huge*: 12637 lines. I have reviewed it but
+     there still could be errors.
+ .
+ qtwebkit (2.2.1-4) unstable; urgency=high
+ .
+   * Confirm new symbol file on all arches except armel and mipsel. However,
+     hopefully, it will work on those two as well.
+   * Urgency=high because we need multi-arch capable QtWebKit in testing as
+     multi-arch Qt4 and non-multiarch QtWebKit do not play well for development
+     purposes.
+ .
+ qtwebkit (2.2.1-3) unstable; urgency=low
+ .
+   * Build Source/WebCore/generated/* with hidden visibility as well (patch
+     webkit_qt_hide_symbols.diff). This reduces a symbol file a lot and brings
+     it back to manageable state.
+   * Update symbol file: a bunch of private WebCore symbols are gone from
+     symbol table now.
+ .
+ qtwebkit (2.2.1-2) unstable; urgency=low
+ .
+   * Upload to Sid.
+ .
+   [ Fathi Boudra ]
+   * Build with -gstabs on armhf instead of -g, like armel.
+ .
+   [ Pino Toscano ]
+   * glibc_mkspec.diff: rename to glibc_hurd_mkspecs.diff, and extend to
+     apply also to the hurd-g++ mkspec.
+   * Bump Qt build dependency to 4:4.8.1 (for the change in paths of QML
+     imports).
+     - update debian/libqtwebkit-qmlwebkitplugin.install accordingly
+     - mark libqtwebkit-qmlwebkitplugin as Multi-Arch: same
+   * Remove ${shlibs:Depends} from libqtwebkit4-dbg.
+Checksums-Sha1: 
+ 8daa83a542188988f52cf32b62c06240d7c5a1b6 1915 qtwebkit-source_2.3.2-0ubuntu3~ubuntu12.04.1+true1.dsc
+ adf66bc92b0c3e41791a419c6b776d0167acaa7c 51649959 qtwebkit-source_2.3.2.orig.tar.gz
+ 6851ce81be2ffb1362146c5096dbb1744314c01d 81686 qtwebkit-source_2.3.2-0ubuntu3~ubuntu12.04.1+true1.debian.tar.gz
+Checksums-Sha256: 
+ e20ae5f7fcd114b8dabda9f2a12446ad412ef4133dbb17d8c33121aab5af8b67 1915 qtwebkit-source_2.3.2-0ubuntu3~ubuntu12.04.1+true1.dsc
+ 858d0d7b073c8c3b3d77ab344b5c67faf80041e30d2f9a91d259f92224906397 51649959 qtwebkit-source_2.3.2.orig.tar.gz
+ dc371ad1e7d1f769d99fc58806f046c68cbb5f542ffcc36fd2f3ba4bf962912b 81686 qtwebkit-source_2.3.2-0ubuntu3~ubuntu12.04.1+true1.debian.tar.gz
+Files: 
+ 3b6a136daf59590a1a7b1179381c9b37 1915 libs optional qtwebkit-source_2.3.2-0ubuntu3~ubuntu12.04.1+true1.dsc
+ f01b4a51436b4fff60d2e6982bd2ce7b 51649959 libs optional qtwebkit-source_2.3.2.orig.tar.gz
+ f5111deb07c7d663d7b9ca1ed5dea6fc 81686 libs optional qtwebkit-source_2.3.2-0ubuntu3~ubuntu12.04.1+true1.debian.tar.gz
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
