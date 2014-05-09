@@ -1,0 +1,6 @@
+*.swp
+*.out
+*~
+*.debian.tar.gz
+*.orig.tar*
+
