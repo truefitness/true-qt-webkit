@@ -12,8 +12,8 @@ MAINTAINER=mpnolan@truefitness.com
 BUILDDIR=${SRCDIR}/${APPNAME}-precise
 DEBIAN_TGZ := http://software.truefitness.com/true-qt-webkit/qtwebkit-source_2.3.2-0ubuntu3~ubuntu12.04.1${TRVERSION}.debian.tar.gz
 
-getsources: get_debian_tgz get_source_package
 all: shownames getsources unpack build repo
+getsources: get_debian_tgz get_source_package
 
 shownames:
 	@echo packagename=${APPNAME}
