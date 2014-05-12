@@ -38,7 +38,7 @@ get_source_package:
 
 source:
 	@echo "creating source package..."
-	debuild --no-lintian -S -uc -us -sd
+	(cd ${BUILDDIR}; debuild --no-lintian -S -uc -us -sd)
 
 build:
 	@echo building...
