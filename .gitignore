@@ -3,4 +3,5 @@
 *~
 *.debian.tar.gz
 *.orig.tar*
+src/qtwebkit-source-2.3.2
 
