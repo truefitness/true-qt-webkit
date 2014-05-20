@@ -1,0 +1,29 @@
+Format: 1.8
+Date: Tue, 20 May 2014 11:09:27 -0500
+Source: qtwebkit-source
+Binary: libqtwebkit-dev libqtwebkit4 libqtwebkit-qmlwebkitplugin libqtwebkit4-dbg
+Architecture: source
+Version: 2.3.2-0ubuntu3+true2
+Distribution: precise
+Urgency: low
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Changed-By: Michael Nolan <mpnolan@truefitness.com>
+Description: 
+ libqtwebkit-dev - Web content engine library for Qt - development files
+ libqtwebkit-qmlwebkitplugin - Qt WebKit QML plugin
+ libqtwebkit4 - Web content engine library for Qt
+ libqtwebkit4-dbg - Web content engine library for Qt - debugging symbols
+Changes: 
+ qtwebkit-source (2.3.2-0ubuntu3+true2) precise; urgency=low
+ .
+   * Changing version string to one greater than current production version.
+Checksums-Sha1: 
+ 0d813a049b08d2bdb768e8a3ee52bd2cb9378283 1859 qtwebkit-source_2.3.2-0ubuntu3+true2.dsc
+ 2a40e4f7582d8ec3cbb8150b6400b5a62d330434 81806 qtwebkit-source_2.3.2-0ubuntu3+true2.debian.tar.gz
+Checksums-Sha256: 
+ 9f6e016eb261cd10d25c23489536036f8e2c2087981c9ad24b7b840d375046d9 1859 qtwebkit-source_2.3.2-0ubuntu3+true2.dsc
+ 23fa0e345a9869499419c94daf505677d94947d64fdc329d5d43d57627c30651 81806 qtwebkit-source_2.3.2-0ubuntu3+true2.debian.tar.gz
+Files: 
+ 606907edb5b35f1b87c67873e384715f 1859 libs optional qtwebkit-source_2.3.2-0ubuntu3+true2.dsc
+ 7f95a69f8989a67bc2db52252c0da6df 81806 libs optional qtwebkit-source_2.3.2-0ubuntu3+true2.debian.tar.gz
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>

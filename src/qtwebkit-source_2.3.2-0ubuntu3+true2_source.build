@@ -1,0 +1,23 @@
+ dpkg-buildpackage -rfakeroot -d -us -uc -S -sd
+dpkg-buildpackage: source package qtwebkit-source
+dpkg-buildpackage: source version 2.3.2-0ubuntu3+true2
+dpkg-buildpackage: source changed by Michael Nolan <mpnolan@truefitness.com>
+ dpkg-source --before-build qtwebkit-source-2.3.2
+ fakeroot debian/rules clean
+dh clean --parallel --list-missing --dbg-package=libqtwebkit4-dbg --with pkgkde_symbolshelper
+   dh_testdir -O--parallel -O--list-missing -O--dbg-package=libqtwebkit4-dbg
+   debian/rules override_dh_auto_clean
+make[1]: Entering directory `/home/mpnolan/true-qt-webkit/src/qtwebkit-source-2.3.2'
+rm -rf WebKitBuild
+find . -name *.pyc | xargs rm
+make[1]: Leaving directory `/home/mpnolan/true-qt-webkit/src/qtwebkit-source-2.3.2'
+   dh_clean -O--parallel -O--list-missing -O--dbg-package=libqtwebkit4-dbg
+ dpkg-source -b qtwebkit-source-2.3.2
+dpkg-source: info: using source format `3.0 (quilt)'
+dpkg-source: info: building qtwebkit-source using existing ./qtwebkit-source_2.3.2.orig.tar.gz
+dpkg-source: info: building qtwebkit-source in qtwebkit-source_2.3.2-0ubuntu3+true2.debian.tar.gz
+dpkg-source: info: building qtwebkit-source in qtwebkit-source_2.3.2-0ubuntu3+true2.dsc
+ dpkg-genchanges -S -sd >../qtwebkit-source_2.3.2-0ubuntu3+true2_source.changes
+dpkg-genchanges: not including original source code in upload
+ dpkg-source --after-build qtwebkit-source-2.3.2
+dpkg-buildpackage: binary and diff upload (original source NOT included)

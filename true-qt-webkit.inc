@@ -1,8 +1,8 @@
 #!/usr/bin/make
 
 DEBVERSION := 2.3.2
-UBVERSION := 0ubuntu3~ubuntu12.04.1
-TRVERSION := +true1
+UBVERSION := 0ubuntu3
+TRVERSION := +true2
 VERSION := ${DEBVERSION}-${UBVERSION}${TRVERSION}
 APPNAME=qtwebkit-source
 SRCDIR=./src
@@ -10,7 +10,7 @@ DEBDIR=./debs
 DSCNAME=${APPNAME}_${VERSION}.dsc
 MAINTAINER=mpnolan@truefitness.com
 BUILDDIR=${SRCDIR}/${APPNAME}-${DEBVERSION}
-DEBIAN_TGZ := http://software.truefitness.com/true-qt-webkit/qtwebkit-source_2.3.2-0ubuntu3~ubuntu12.04.1${TRVERSION}.debian.tar.gz
+DEBIAN_TGZ := http://software.truefitness.com/true-qt-webkit/qtwebkit-source_2.3.2-0ubuntu3${TRVERSION}.debian.tar.gz
 
 all: shownames getsources unpack build repo
 getsources: get_debian_tgz get_source_package
