@@ -1,0 +1,35 @@
+Format: 1.8
+Date: Tue, 20 May 2014 11:09:27 -0500
+Source: qtwebkit-source
+Binary: libqtwebkit-dev libqtwebkit4 libqtwebkit-qmlwebkitplugin libqtwebkit4-dbg
+Architecture: i386
+Version: 2.3.2-0ubuntu3+true2
+Distribution: precise
+Urgency: low
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Changed-By: Michael Nolan <mpnolan@truefitness.com>
+Description: 
+ libqtwebkit-dev - Web content engine library for Qt - development files
+ libqtwebkit-qmlwebkitplugin - Qt WebKit QML plugin
+ libqtwebkit4 - Web content engine library for Qt
+ libqtwebkit4-dbg - Web content engine library for Qt - debugging symbols
+Changes: 
+ qtwebkit-source (2.3.2-0ubuntu3+true2) precise; urgency=low
+ .
+   * Changing version string to one greater than current production version.
+Checksums-Sha1: 
+ 5694fa6e999f594661802e26ffbbb30a05ce6c68 75550 libqtwebkit-dev_2.3.2-0ubuntu3+true2_i386.deb
+ bf2a2efca8def3592851a5713a8f3389059195c5 9073416 libqtwebkit4_2.3.2-0ubuntu3+true2_i386.deb
+ 21db5cab2c6b1e627363412aff704fa1b6b36a49 84632 libqtwebkit-qmlwebkitplugin_2.3.2-0ubuntu3+true2_i386.deb
+ 5da6bff679e71857d1a18bc9b2c9d368f7015018 2851086 libqtwebkit4-dbg_2.3.2-0ubuntu3+true2_i386.deb
+Checksums-Sha256: 
+ 7ee088e91b773e709502b16eb859cecd2851f48c5d050c65d940da2c5bc70d1e 75550 libqtwebkit-dev_2.3.2-0ubuntu3+true2_i386.deb
+ f5be677860bd4a3f8bfd02b16c5c55f8c74094a18a01cbfbf21967970bebf0ae 9073416 libqtwebkit4_2.3.2-0ubuntu3+true2_i386.deb
+ c29569b8c1dbf2be516cdc2e783cc382919755f9d09ff8940b1d6deb2749ce3d 84632 libqtwebkit-qmlwebkitplugin_2.3.2-0ubuntu3+true2_i386.deb
+ e33fe42fa58875c739937a2b55f2cd8caf822a4d67b234048e5f78ac82cf46f1 2851086 libqtwebkit4-dbg_2.3.2-0ubuntu3+true2_i386.deb
+Files: 
+ 167dc8892cc7406456604efe1994bdb6 75550 libdevel optional libqtwebkit-dev_2.3.2-0ubuntu3+true2_i386.deb
+ 1284d8618718b0604e9280e8a5134dd3 9073416 libs optional libqtwebkit4_2.3.2-0ubuntu3+true2_i386.deb
+ 5688cbbee91155da1a7c7d90dc122fc8 84632 libs optional libqtwebkit-qmlwebkitplugin_2.3.2-0ubuntu3+true2_i386.deb
+ f61f96130296258919e0823897958237 2851086 debug extra libqtwebkit4-dbg_2.3.2-0ubuntu3+true2_i386.deb
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
