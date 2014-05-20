@@ -9,7 +9,7 @@ SRCDIR=./src
 DEBDIR=./debs
 DSCNAME=${APPNAME}_${VERSION}.dsc
 MAINTAINER=mpnolan@truefitness.com
-BUILDDIR=${SRCDIR}/${APPNAME}-precise
+BUILDDIR=${SRCDIR}/${APPNAME}-${DEBVERSION}
 DEBIAN_TGZ := http://software.truefitness.com/true-qt-webkit/qtwebkit-source_2.3.2-0ubuntu3~ubuntu12.04.1${TRVERSION}.debian.tar.gz
 
 all: shownames getsources unpack build repo
