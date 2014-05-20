@@ -1,0 +1,35 @@
+Format: 1.8
+Date: Fri, 09 May 2014 13:57:53 -0500
+Source: qtwebkit-source
+Binary: libqtwebkit-dev libqtwebkit4 libqtwebkit-qmlwebkitplugin libqtwebkit4-dbg
+Architecture: i386
+Version: 2.3.2-0ubuntu3~ubuntu12.04.1+true1
+Distribution: precise-backports
+Urgency: low
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Changed-By: Michael Nolan <mpnolan@truefitness.com>
+Description: 
+ libqtwebkit-dev - Web content engine library for Qt - development files
+ libqtwebkit-qmlwebkitplugin - Qt WebKit QML plugin
+ libqtwebkit4 - Web content engine library for Qt
+ libqtwebkit4-dbg - Web content engine library for Qt - debugging symbols
+Changes: 
+ qtwebkit-source (2.3.2-0ubuntu3~ubuntu12.04.1+true1) precise-backports; urgency=low
+ .
+   * No-change backport to precise
+Checksums-Sha1: 
+ f66f84c05fa9f6309d25c5aa1a76375ba103835f 75478 libqtwebkit-dev_2.3.2-0ubuntu3~ubuntu12.04.1+true1_i386.deb
+ a1152c042309b6e2969fda5a0bad4af747d420b8 9072836 libqtwebkit4_2.3.2-0ubuntu3~ubuntu12.04.1+true1_i386.deb
+ 960caa3f2a44db492b30cf7e88eca4c80d1dfb46 84578 libqtwebkit-qmlwebkitplugin_2.3.2-0ubuntu3~ubuntu12.04.1+true1_i386.deb
+ dd994a7e8cc18e9cf573063fae466a46232a555e 2830270 libqtwebkit4-dbg_2.3.2-0ubuntu3~ubuntu12.04.1+true1_i386.deb
+Checksums-Sha256: 
+ a33de6462cc67bf84958c52e177d91fd9da80eaf49ae14c59ec546c4545ceabd 75478 libqtwebkit-dev_2.3.2-0ubuntu3~ubuntu12.04.1+true1_i386.deb
+ ffc8e3961ba122964e745279f46b4c23b78e1b51e9a98509f12d36a641160099 9072836 libqtwebkit4_2.3.2-0ubuntu3~ubuntu12.04.1+true1_i386.deb
+ 31b0cb76be19968321e6d3f5ce19d107246bd257ca7bed174db2370b4508bd20 84578 libqtwebkit-qmlwebkitplugin_2.3.2-0ubuntu3~ubuntu12.04.1+true1_i386.deb
+ 84e699acd5e45441a1457e20d23803bf92c615752a1e8bf53309980444d40eb9 2830270 libqtwebkit4-dbg_2.3.2-0ubuntu3~ubuntu12.04.1+true1_i386.deb
+Files: 
+ 27e2b187baa80b3d2844bca8dbc0197c 75478 libdevel optional libqtwebkit-dev_2.3.2-0ubuntu3~ubuntu12.04.1+true1_i386.deb
+ f0cc08e0d8b2cea001ab4cfff15b8ad8 9072836 libs optional libqtwebkit4_2.3.2-0ubuntu3~ubuntu12.04.1+true1_i386.deb
+ 917d3726da98c75c5adfb42af809f97f 84578 libs optional libqtwebkit-qmlwebkitplugin_2.3.2-0ubuntu3~ubuntu12.04.1+true1_i386.deb
+ f5dc00c7fdba8d5ff29afc47d83ba65f 2830270 debug extra libqtwebkit4-dbg_2.3.2-0ubuntu3~ubuntu12.04.1+true1_i386.deb
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
